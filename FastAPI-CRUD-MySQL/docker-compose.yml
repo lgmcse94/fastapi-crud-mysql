@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '8200:8200'
+    environment:
+      - MYSQL_DATABASE_URL=mysql://admin:admin123@all-dbs.c5ghvu4rq0yw.us-east-1.rds.amazonaws.com:3306/alldatabases
+      - MYSQL_HOST=all-dbs.c5ghvu4rq0yw.us-east-1.rds.amazonaws.com
